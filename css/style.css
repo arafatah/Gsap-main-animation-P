@@ -1,4 +1,4 @@
-body {  background:#0a5b90;
+/* body {  background:#0a5b90;
     font-family: Kanit,sans-serif;
   }
   img {
@@ -23,4 +23,162 @@ body {  background:#0a5b90;
   button:focus {
     outline:none;
     background-color: white;
-  }
+  } */
+
+ /* //////////////////////////// */
+
+/*  body, html {
+	width:100%;
+	height:100%;
+}
+
+body {
+	background:#1d1d1d;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	margin:0;
+	flex-direction:column;
+	color:white;
+	font-family:sans-serif;
+}
+
+h2 {
+	font-weight:normal;
+}
+#demo {
+	position:relative;
+	width:500px;
+	height:350px;
+	border-bottom:100px solid black;
+	background:dodgerblue;
+}
+
+.truck {
+	position:absolute;
+	bottom:-3px;
+	left:60px;
+} */
+
+/* /////////////////////  */
+
+body, html{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	margin:0;
+	color:#eee;
+}
+
+* {
+	position:relative;
+	box-sizing:border-box;
+}
+body {
+	background:#1d1d1d;
+	font-family:sans-serif;
+}
+
+h2 span {
+	color:#f39;
+}
+.label {
+	text-align:center;
+   padding:8px;
+	min-width:125px;
+	box-shadow:2px 2px 8px rgb(0, 0, 0, 0.8);	
+	border-radius:500px;
+	background:#f39;
+	border:2px solid white;
+	cursor:pointer;
+}
+
+.hidden {
+	display:none;
+}
+
+
+h2 {
+	position:absolute;
+	top:20px;
+	text-align:center;
+	font-weight:normal;
+}
+
+.demo {
+	width:100%;
+	height:100%;
+	background:black;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	flex-direction:column;
+
+}
+.box {
+	width:300px;
+	height:300px;
+	min-width:300px;
+	background:dodgerblue;
+}
+
+.dot {
+	position:absolute;
+	background: rgba(255, 20, 20, 0.6);
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	transform:translate(-50%, -50%);
+	z-index:100;
+	
+}
+
+.nav {
+	color:#ccc;
+	font-size:1em;
+	line-height:1em;
+	display:flex;
+	align-items:center;
+	justify-content:space-around;
+	background:#1d1d1d;
+	width:80%;
+	padding:20px;
+	position: absolute;
+	bottom:20px;
+}
+
+
+
+.output span {
+	color:#d0782a;
+}
+
+input[type="radio"] {
+  margin-top: -1px;
+  vertical-align: middle;
+}
+
+label {
+	white-space:nowrap;
+}
+
+.labels {
+	position:absolute;
+	
+}
+
+@media screen and (max-width: 400px) {
+	label {
+		display:block;
+		margin-bottom:10px;
+      margin-top:10px;
+
+	}
+	.labels {
+		
+	}
+	.newLabel {
+		background:red;
+	
+	}
+}

@@ -10,14 +10,39 @@
 </head>
 
 <body>
-    <img class="fred green" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/fred.svg" alt="" width="150">
+    <!-- <h2>Click Anywhere to Play</h1>
 
-    <div id="nav">
-        <button id="play">play</button>
-        <button id="pause">pause</button>
-        <button id="reverse">reverse</button>
-        <button id="restart">restart</button>
+        <div id="demo">
+            <img class="truck" src="https://assets.codepen.io/32887/truck-final.png" alt="" />
+        </div> -->
+
+    <div class="demo">
+        <h2><span>transformOrigin</span> is set with a pair of <span>horizontal</span> and <span>vertical</span> values
+        </h2>
+        <div class="box"></div>
+        <div class="labels"></div>
+        <div class="nav">
+            <div class="radios">
+                <label>
+                    <input type="radio" name="property" value="pixels" checked>
+                    pixels
+                </label>
+                <label>
+                    <input type="radio" name="property" value="percents">
+                    percents
+                </label>
+                <label>
+                    <input type="radio" name="property" value="keywords">
+                    keywords
+                </label>
+            </div>
+
+        </div>
     </div>
+    <div class="hidden">
+        <div class="label">left top</div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </body>
 
