@@ -33,7 +33,7 @@ document.querySelector(".truck").onclick = function (e) {
 };
  */
 
-console.clear();
+/* console.clear();
 const demo = document.querySelector(".demo");
 const box = document.querySelector(".box");
 const dot = document.querySelector(".dot");
@@ -112,4 +112,65 @@ function updateProperty() {
   newLabels.forEach(function (e, i) {
     gsap.set(e, { textContent: values[property + "Array"][i] });
   });
+} */
+
+//////////////////
+// CountDown Timer
+const CountDown = function (time) {
+  const timer = document.querySelector(".timer");
+
+  const tick = function () {
+    const min = Math.trunc(time / 60);
+    const sec = time % 60;
+
+    timer.textContent = `${min < 10 ? `0${min}` : min}:${
+      sec < 10 ? `0${sec}` : sec
+    }`;
+
+    if (time === 0) {
+      clearInterval(interval);
+      timer.textContent = "Time's up!";
+      timer.classList.remove("warning");
+    }
+
+    if (time <= 5 && time > 0) {
+      timer.classList.add("warning");
+    } else {
+      timer.classList.remove("warning");
+    }
+
+    time--;
+  };
+
+  tick();
+  const interval = setInterval(tick, 1000);
+
+  return interval;
+};
+
+CountDown(1000);
+
+
+const mybutton = document.getElementById("myBtn");
+
+// Show the button when the user scrolls down 20px from the top of the document
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop == 0 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
 }
+
+// When the user clicks on the button, scroll to the top of the document smoothly
+function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Adds smooth scrolling
+  });
+}
+mybutton.addEventListener("click", topFunction);
