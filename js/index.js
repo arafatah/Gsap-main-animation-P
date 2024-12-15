@@ -150,11 +150,10 @@ const CountDown = function (time) {
 
 CountDown(1000);
 
-
 // Scroll to top
 const mybutton = document.getElementById("myBtn");
 
-// To show the button on scroll 
+// To show the button on scroll
 window.onscroll = function () {
   scrollFunction();
 };
@@ -167,11 +166,60 @@ function scrollFunction() {
   }
 }
 
-// For smooth scroll 
+// For smooth scroll
 function topFunction() {
   window.scrollTo({
     top: 0,
-    behavior: "smooth", 
+    behavior: "smooth",
   });
 }
 mybutton.addEventListener("click", topFunction);
+
+/// Counter UP
+
+/* function startCounter(startFrom, target, duration) {
+  let upto = startFrom; 
+  const interval = duration / target; 
+
+  // Set interval to update the counter
+  const counts = setInterval(() => {
+    const count = document.getElementById("counter");
+    count.innerHTML = ++upto;
+    if (upto >= target) {
+      clearInterval(counts); 
+      count.innerHTML = target;
+      return;
+    }
+  }, interval);
+}
+
+startCounter(10, 100, 1000); */  // StartFrom - Target - Duration
+
+
+function startCounter(startFrom, target, duration) {
+  let upto = startFrom; 
+  const interval = duration / (target - startFrom); 
+
+  // Set interval to update the counter
+  const counts = setInterval(() => {
+    const count = document.getElementById("counter");
+    count.innerHTML = ++upto;
+
+    if (upto >= target) {
+      clearInterval(counts); 
+      count.innerHTML = target; 
+      return;
+    }
+  }, interval);
+}
+
+// Get values from dataset
+function initCounterFromDataset() {
+  const counterElement = document.getElementById("counter");
+  const { startFrom = 0, target = 0, duration = 1000 } = counterElement.dataset;
+
+  startCounter(Number(startFrom), Number(target), Number(duration));
+}
+
+// Initialize the counter
+initCounterFromDataset();
