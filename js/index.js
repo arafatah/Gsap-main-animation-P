@@ -151,26 +151,27 @@ const CountDown = function (time) {
 CountDown(1000);
 
 
+// Scroll to top
 const mybutton = document.getElementById("myBtn");
 
-// Show the button when the user scrolls down 20px from the top of the document
+// To show the button on scroll 
 window.onscroll = function () {
   scrollFunction();
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop == 0 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document smoothly
+// For smooth scroll 
 function topFunction() {
   window.scrollTo({
     top: 0,
-    behavior: "smooth", // Adds smooth scrolling
+    behavior: "smooth", 
   });
 }
 mybutton.addEventListener("click", topFunction);
